@@ -32,6 +32,8 @@ public interface CollegeService {
 
 	List<String> findClgNameByEstablishmentYear(Integer collegeEstablishmentYear);
 
+	List<College> findDataByNameAndLocation(String collegeName, String collegeLocation);
+
 	 
 
 

@@ -102,6 +102,12 @@ public class CollegeController {
 			return clgService.findClgNameByEstablishmentYear(collegeEstablishmentYear);
 		}
 		
+		//find all data by passing two value.
+		@GetMapping("/findData")
+		public List<College> getAllData(@RequestParam String  collegeName, @RequestParam String  collegeLocation){
+			return clgService.findDataByNameAndLocation(collegeName,collegeLocation);
+			
+		}
 	
 
 }

@@ -154,6 +154,20 @@ public class CollegeServiceImpl implements CollegeService {
 		return clgNameByEstablishYear;
 	}
 
+	@Override
+	public List<College> findDataByNameAndLocation(String collegeName, String collegeLocation) {
+		List<College> result=collegeRepository.findAll();
+		List<College>finalval=new ArrayList<>();
+		for(College data:result) {
+			if (data.getCollegeName().equalsIgnoreCase(collegeName) && data.getCollegeLocation().equals(collegeLocation)) {
+				List<College> val=new ArrayList<>();
+				val.add(data);
+				finalval.addAll(val);
+			}
+		}
+		return finalval;
+	}
+
 	 
 
 	 
