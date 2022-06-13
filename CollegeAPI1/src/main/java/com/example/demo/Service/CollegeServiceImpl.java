@@ -130,8 +130,13 @@ public class CollegeServiceImpl implements CollegeService {
 
 	@Override
 	public String findClgNameByLocation(String collegeLocation) {
-		// TODO Auto-generated method stub
-		return null;
+		 String clgName1 =null;
+		 List<College> newLocation1 =collegeRepository.findByCollegeLocation(collegeLocation);
+		 for(College  college : newLocation1) {
+			 clgName1 = college.getCollegeName();
+			 
+		 }
+		return clgName1;
 	}
 
 	 
