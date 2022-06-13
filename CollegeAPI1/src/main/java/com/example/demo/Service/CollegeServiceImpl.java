@@ -1,5 +1,6 @@
 package com.example.demo.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -139,13 +140,23 @@ public class CollegeServiceImpl implements CollegeService {
 		return clgName1;
 	}
 
+	@Override
+	public List<String> findClgNameByEstablishmentYear(Integer collegeEstablishmentYear) {
+		List<String> clgNameByEstablishYear =new ArrayList<>();
+		 List<College> establishYear = collegeRepository.findByCollegeEstablishmentYear(collegeEstablishmentYear);
+		 for(College establish : establishYear) {
+			 String name=establish.getCollegeName();
+			 clgNameByEstablishYear.add(name);
+			 System.out.println(name);
+		 }
+		
+		 
+		return clgNameByEstablishYear;
+	}
+
 	 
 
-	/*@Override
-	public String findClgNameByEstablishmentYear(Integer collegeEstablishmentYear) {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
+	 
 
 	
 

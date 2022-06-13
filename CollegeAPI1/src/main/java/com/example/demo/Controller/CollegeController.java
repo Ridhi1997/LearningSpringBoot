@@ -97,10 +97,10 @@ public class CollegeController {
 		}
 		
 	 // finding college name by establishment year with RequestParam .
-	/*	@GetMapping("/findbyEstablishmentYear")
-		public String  getCollegeNameByEstablishmentYear(@RequestParam Integer collegeEstablishmentYear) {
+		@GetMapping("/findbyEstablishmentYear")
+		public List<String>  getCollegeNameByEstablishmentYear(@RequestParam Integer collegeEstablishmentYear) {
 			return clgService.findClgNameByEstablishmentYear(collegeEstablishmentYear);
-		}*/
+		}
 		
 	
 

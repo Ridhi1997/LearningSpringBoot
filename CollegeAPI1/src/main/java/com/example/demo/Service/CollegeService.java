@@ -30,7 +30,7 @@ public interface CollegeService {
 
 	String findClgNameByLocation(String collegeLocation);
 
-	//String findClgNameByEstablishmentYear(Integer collegeEstablishmentYear);
+	List<String> findClgNameByEstablishmentYear(Integer collegeEstablishmentYear);
 
 	 
 
